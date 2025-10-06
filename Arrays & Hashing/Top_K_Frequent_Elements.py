@@ -9,7 +9,7 @@ class Solution(object):
         keys = list(hash.keys())
         keys.sort()
         for ii in keys:
-            new_hash[ii] = hash[i]
+            new_hash[ii] = hash[ii]
         for jf in new_hash:
             emp_list.append(jf)
         for i in range(k):
