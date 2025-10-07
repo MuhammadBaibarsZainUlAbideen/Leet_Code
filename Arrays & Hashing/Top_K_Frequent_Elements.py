@@ -1,5 +1,6 @@
 class Solution(object):
     def topKFrequent(self, nums, k):
+        #o(mlogm)
         hash = {}
         new_hash = {}
         emp_list = []
