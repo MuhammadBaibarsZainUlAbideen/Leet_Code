@@ -1,15 +1,18 @@
 class Solution(object):
-    def Encode(self, str):
-        gg = []
-        for i in str:
-            gf = i.encode('UTF-8')
-            gg.append(gf)
-        return gg
+    def Encode(self, str1):
+        string = ""
+        for i in str1:
+            lenght = str(len(i))
+            string += lenght + "#" + i
+        return string
 
 
 
-    def Decode(self,str):
-        pass
+
+
+    def Decode(self):
+        calling = self.Encode(["Hello","Poks"])
+        
 
 
 gg = Solution()

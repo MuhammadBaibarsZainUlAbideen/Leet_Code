@@ -1,7 +1,7 @@
 class Solution(object):
     def groupAnagrams(self, strs):
         import collections
-        dictinoey = collections.defaultdict(list)
+        dictinoey = collections.defaultdict(list)#all the values will be in list 
         for i in strs:
             ll = [0]*26
             for  j in i:
