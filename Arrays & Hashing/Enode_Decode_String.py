@@ -1,5 +1,6 @@
 class Solution(object):
     def Encode(self, str1):
+        #Enocde
         string = ""
         for i in str1:
             lenght = str(len(i))
@@ -11,6 +12,7 @@ class Solution(object):
 
 
     def Decode(self):
+        #Deocde
         calling = self.Encode(["Hello","Poks"])
         s = calling
         res = []
