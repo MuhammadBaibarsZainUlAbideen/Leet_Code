@@ -1,17 +1,23 @@
 class Solution(object):
     def productExceptSelf(self, nums):
+        emp = [1]*len(nums)
+        print(emp)
+        pf = 1
+        prf=1
         for i in range(len(nums)):
-            l = []
-            mul = 1
-            if i != 0:
-                #left_side = nums[:i]
-                l.append(nums[:i])
-            if i != len(nums)-1:
-                #righ_side = nums[i+1:len(nums)] 
-                l.append(nums[i+1:len(nums)] )
-                for j in l:
-                    mul = mul * j
-                return mul
-            
+            if i == 0 :
+                emp[i] = pf
+            else:
+                pf = pf * nums[i-1]
+                emp[i] = pf
+        for j in range(len(nums)-1,-1,-1):
+            if j == len(nums)-1:
+                emp[j] *= prf
+            else:
+                prf = prf * nums[j+1]
+                emp[j] = emp[j]*prf
+             
+        return emp
+
 ff = Solution()
-print(ff.productExceptSelf([1,2,4,3]))
+print(ff.productExceptSelf([1,2,3,4]))
