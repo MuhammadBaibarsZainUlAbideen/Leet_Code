@@ -12,13 +12,14 @@ class Solution(object):
                 g = stack.pop()
                 pointer -=1
                 f = g+i
-                if f == "()" or f=="[]":
+                if f == "()" or f=="[]" or f == "{}":
                     pass
                 else:
                     return False
-        if len(stack) == 1:
-            return False
-        else:
+        if pointer ==0:
             return True
+        else:
+            return False
+
 ff = Solution()
-print(ff.isValid("("))
+print(ff.isValid("(())"))
