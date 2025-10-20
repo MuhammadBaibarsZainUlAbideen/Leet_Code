@@ -18,4 +18,4 @@ class Solution(object):
                     stack.append(int(float(a) / b))  
         return stack[0]
 ff = Solution()
-print(ff.evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))
+print(ff.evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","-"]))
